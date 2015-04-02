@@ -1,0 +1,15 @@
+<h1>YaWen's Message Board</h1>
+
+<h2>Please leave a message here!</h2>
+
+	<% @jobs.each do |job| %>
+	<div id="comment">
+		<h3><%= job.title %></h3>
+		<p><%= job.description %></p>
+	</div>
+	
+	<h5><%= link_to "Edit Message", edit_job_path(job)%>     
+		<%= link_to 'Delete Message', job, method: :delete %>
+	</h5>
+
+<% end %>
